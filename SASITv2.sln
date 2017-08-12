@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminServerClient", "AdminServerClient\AdminServerClient.csproj", "{4E9009DA-410E-4A43-A02D-0159BC11327C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateReporteClient", "GenerateReporteClient\GenerateReporteClient.csproj", "{66F5B520-3276-45FD-9B4B-92691E45D7DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4E9009DA-410E-4A43-A02D-0159BC11327C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E9009DA-410E-4A43-A02D-0159BC11327C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E9009DA-410E-4A43-A02D-0159BC11327C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66F5B520-3276-45FD-9B4B-92691E45D7DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66F5B520-3276-45FD-9B4B-92691E45D7DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66F5B520-3276-45FD-9B4B-92691E45D7DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66F5B520-3276-45FD-9B4B-92691E45D7DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
