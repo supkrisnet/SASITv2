@@ -31,13 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.dgvServidores = new System.Windows.Forms.DataGridView();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.dgvServidores = new System.Windows.Forms.DataGridView();
             this.Oid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Servidor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DirIp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServidores)).BeginInit();
             this.SuspendLayout();
@@ -62,20 +63,6 @@
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // dgvServidores
-            // 
-            this.dgvServidores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvServidores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvServidores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Oid,
-            this.Servidor,
-            this.DirIp});
-            this.dgvServidores.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvServidores.Location = new System.Drawing.Point(0, 25);
-            this.dgvServidores.Name = "dgvServidores";
-            this.dgvServidores.Size = new System.Drawing.Size(1105, 662);
-            this.dgvServidores.TabIndex = 2;
-            // 
             // toolStripButton1
             // 
             this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -99,6 +86,21 @@
             this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton2.Text = "toolStripButton2";
             // 
+            // dgvServidores
+            // 
+            this.dgvServidores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvServidores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvServidores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Oid,
+            this.Servidor,
+            this.DirIp,
+            this.Status});
+            this.dgvServidores.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvServidores.Location = new System.Drawing.Point(0, 25);
+            this.dgvServidores.Name = "dgvServidores";
+            this.dgvServidores.Size = new System.Drawing.Size(1105, 662);
+            this.dgvServidores.TabIndex = 2;
+            // 
             // Oid
             // 
             this.Oid.HeaderText = "Id";
@@ -113,6 +115,11 @@
             // 
             this.DirIp.HeaderText = "DirIP";
             this.DirIp.Name = "DirIp";
+            // 
+            // Status
+            // 
+            this.Status.HeaderText = "Estatus";
+            this.Status.Name = "Status";
             // 
             // Form1
             // 
@@ -143,6 +150,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Oid;
         private System.Windows.Forms.DataGridViewTextBoxColumn Servidor;
         private System.Windows.Forms.DataGridViewTextBoxColumn DirIp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
     }
 }
 
