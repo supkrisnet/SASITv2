@@ -1,6 +1,6 @@
 ﻿namespace AdminServerClient
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,26 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.dgvServidores = new System.Windows.Forms.DataGridView();
-            this.Oid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Servidor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DirIp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tssl01 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tssl02 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tssl03 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tssl04 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServidores)).BeginInit();
             this.SuspendLayout();
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 687);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tssl01,
+            this.tssl02,
+            this.tssl03,
+            this.tssl04});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 685);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1105, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1105, 24);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -65,6 +73,7 @@
             // 
             // toolStripButton1
             // 
+            this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -74,11 +83,13 @@
             // 
             // toolStripSeparator1
             // 
+            this.toolStripSeparator1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripButton2
             // 
+            this.toolStripButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -88,40 +99,59 @@
             // 
             // dgvServidores
             // 
+            this.dgvServidores.AllowUserToAddRows = false;
+            this.dgvServidores.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gainsboro;
+            this.dgvServidores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvServidores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvServidores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvServidores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvServidores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Oid,
-            this.Servidor,
-            this.DirIp,
-            this.Status});
             this.dgvServidores.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvServidores.Location = new System.Drawing.Point(0, 25);
+            this.dgvServidores.MultiSelect = false;
             this.dgvServidores.Name = "dgvServidores";
-            this.dgvServidores.Size = new System.Drawing.Size(1105, 662);
+            this.dgvServidores.ReadOnly = true;
+            this.dgvServidores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvServidores.Size = new System.Drawing.Size(1105, 660);
             this.dgvServidores.TabIndex = 2;
+            this.dgvServidores.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvServidores_RowsAdded);
             // 
-            // Oid
+            // tssl01
             // 
-            this.Oid.HeaderText = "Id";
-            this.Oid.Name = "Oid";
+            this.tssl01.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
+            this.tssl01.Name = "tssl01";
+            this.tssl01.Size = new System.Drawing.Size(16, 19);
+            this.tssl01.Text = "*";
             // 
-            // Servidor
+            // tssl02
             // 
-            this.Servidor.HeaderText = "Servidor";
-            this.Servidor.Name = "Servidor";
+            this.tssl02.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
+            this.tssl02.Name = "tssl02";
+            this.tssl02.Size = new System.Drawing.Size(16, 19);
+            this.tssl02.Text = "*";
             // 
-            // DirIp
+            // tssl03
             // 
-            this.DirIp.HeaderText = "DirIP";
-            this.DirIp.Name = "DirIp";
+            this.tssl03.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
+            this.tssl03.Name = "tssl03";
+            this.tssl03.Size = new System.Drawing.Size(1046, 19);
+            this.tssl03.Spring = true;
+            this.tssl03.Text = "*";
             // 
-            // Status
+            // tssl04
             // 
-            this.Status.HeaderText = "Estatus";
-            this.Status.Name = "Status";
+            this.tssl04.Name = "tssl04";
+            this.tssl04.Size = new System.Drawing.Size(12, 19);
+            this.tssl04.Text = "*";
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -129,8 +159,14 @@
             this.Controls.Add(this.dgvServidores);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.statusStrip1);
-            this.Name = "Form1";
+            this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServidores)).EndInit();
@@ -147,10 +183,10 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Oid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Servidor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DirIp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.ToolStripStatusLabel tssl01;
+        private System.Windows.Forms.ToolStripStatusLabel tssl02;
+        private System.Windows.Forms.ToolStripStatusLabel tssl03;
+        private System.Windows.Forms.ToolStripStatusLabel tssl04;
     }
 }
 
