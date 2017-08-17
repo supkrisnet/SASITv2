@@ -3,7 +3,7 @@
     "Host": "10.10.72.37",
     "Schema": "SASIT",
     "User": "postgres",
-    "Password": "",
+    "Password": "ffsf",
     "Port": 15432
   },
   "App": {
