@@ -260,4 +260,9 @@ paket-files/
 __pycache__/
 *.pyc
 
-*.json
+# Excluir los archivos de configuracion
+[Cc]onfig/
+#*.json
+
+#Excluir los archivos de log
+[Ll]og/
