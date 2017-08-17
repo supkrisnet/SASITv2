@@ -1,0 +1,12 @@
+﻿{
+  "Database": {
+    "Host": "10.10.72.37",
+    "Schema": "SASIT",
+    "User": "postgres",
+    "Password": "SZ/HtBBTGvpW9pt5gjxASktFpZuDdYZyi8Oixx11kt4=",
+    "Port": 15432
+  },
+  "App": {
+    "Code": "qwerty"
+  }
+}
