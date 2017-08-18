@@ -94,11 +94,6 @@ namespace AdminServerClient
             }
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             if (dgvServidores.SelectedRows.Count ==0)
@@ -112,6 +107,14 @@ namespace AdminServerClient
             f.Oid= string.Format("{0}", dgvServidores.SelectedRows[0].Cells["id"].Value);
             f.Database = (PgSQLDatabase)Database;
             f.ShowDialog();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            dgvServidores.ClearSelection();
+            dgvServidores.Rows.Clear();
+            FillData();
+            dgvServidores.ClearSelection();
         }
     }
 }
