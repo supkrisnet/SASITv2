@@ -137,8 +137,11 @@ namespace AdminServerClient
 
         private void FillData()
         {
-            String qs = string.Format(@"SELECT id,servidor,descripcion,estatus,criticidad,sitio,hardware,so 
-                                        FROM servers_catalog
+            dgvServidores.ClearSelection();
+            dgvServidores.Rows.Clear();
+
+            String qs = string.Format(@"SELECT sc.id,sc.servidor,sc.descripcion,sc.estatus,sc.criticidad,sc.sitio,sc.hardware,sc.so, (SELECT string_agg(valor,'/') FROM Tags WHERE sid=sc.id AND etiqueta='DIR. IP') AS dirip, (SELECT string_agg(valor,'/') FROM Tags WHERE sid=sc.id AND etiqueta='AMBIENTE') AS ambiente, (SELECT string_agg(valor,'/') FROM Tags WHERE sid=sc.id AND etiqueta='DOMINIO') AS dominio
+                                        FROM servers_catalog AS sc
                                         ORDER BY servidor ASC");
 
             DataTable dt = Database.QueryToDataTable(qs);
@@ -147,6 +150,8 @@ namespace AdminServerClient
             {
                 dgvServidores.Rows.Add(FillCells(dr));
             }
+
+            dgvServidores.ClearSelection();
         }
 
         private object[] FillCells(DataRow r)

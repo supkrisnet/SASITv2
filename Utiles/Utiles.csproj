@@ -56,6 +56,7 @@
     <Compile Include="Crypt\Offusque.cs" />
     <Compile Include="Database\IDatabase.cs" />
     <Compile Include="Database\PostgreSQL.cs" />
+    <Compile Include="Forms\Helper.cs" />
     <Compile Include="Forms\MainAppFormBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +64,7 @@
       <DependentUpon>MainAppFormBase.cs</DependentUpon>
     </Compile>
     <Compile Include="Logger\Tracer.cs" />
+    <Compile Include="Messages\Captions.cs" />
     <Compile Include="Messages\Exceptions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

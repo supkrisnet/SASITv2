@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdminServerClient.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Utiles.Database;
 using Utiles.Forms;
 
 namespace AdminServerClient
@@ -90,6 +92,26 @@ namespace AdminServerClient
 
                 Utiles.Logger.Tracer.PrintDateTime();
             }
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            if (dgvServidores.SelectedRows.Count ==0)
+            {
+                MessageBox.Show(Utiles.Messages.Captions._NO_ROW_SELECTED_);
+                return;
+            }
+
+            ServidorForm f = new ServidorForm();
+
+            f.Oid= string.Format("{0}", dgvServidores.SelectedRows[0].Cells["id"].Value);
+            f.Database = (PgSQLDatabase)Database;
+            f.ShowDialog();
         }
     }
 }
